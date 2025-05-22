@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Carrinho - Space Burguer</title>
+    <link rel="stylesheet" href="../css/carrinho.css">
+</head>
+<body>
+<!-- Overlay que cobre toda tela -->
+<div id="modalOverlay">
+    <div id="modalAlert"></div>
+</div>
+
+    <h1>Seu Carrinho</h1>
+    <div id="carrinho"></div>
+
+    <button id="finalizarBtn" class="btn" onclick="finalizarPedido()">Finalizar Pedido</button>
+    <button id="limparBtn" class="btn" onclick="confirmarLimparCarrinho()">Esvaziar Carrinho</button>
+    <br><br>
+    <a href="home.html" class="btn">Voltar ao Cardápio</a>
+
+    <!-- Modal para alertas customizados -->
+    <div id="modalAlert"></div>
+    <script src="../js/carrinho.js"></script>
+</body>
+</html>

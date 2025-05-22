@@ -1,0 +1,83 @@
+body {
+    background-color: #0d0d0d;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+}
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid white;
+}
+th, td {
+    padding: 10px;
+}
+input[type=number] {
+    width: 60px;
+    font-size: 1rem;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+.btn {
+    background-color: #ffcc00;
+    color: #0d0d0d;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 3px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.btn:hover:not(:disabled) {
+    background-color: #e6b800;
+}
+.btn:disabled {
+    background-color: #666;
+    cursor: not-allowed;
+}
+/* Modal de alerta customizado */
+/* Overlay semitransparente cobrindo a tela inteira */
+#modalOverlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100vw;
+height: 100vh;
+background: rgba(0, 0, 0, 0.6);
+display: none; /* começa escondido */
+align-items: center; /* centraliza vertical */
+justify-content: center; /* centraliza horizontal */
+z-index: 1000;
+}
+
+/* Modal centralizado, caixa branca arredondada e sombra */
+#modalAlert {
+background-color: #ffcc00;
+color: #0d0d0d;
+padding: 25px 40px;
+border-radius: 15px;
+box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+font-weight: bold;
+font-size: 1.2rem;
+max-width: 90%;
+text-align: center;
+opacity: 0;
+transform: scale(0.7);
+transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Quando o modal estiver ativo */
+#modalOverlay.show {
+display: flex;
+}
+
+#modalOverlay.show #modalAlert {
+opacity: 1;
+transform: scale(1);
+}
